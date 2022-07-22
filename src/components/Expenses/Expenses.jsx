@@ -7,7 +7,7 @@ function Expenses({ expenses }) {
     return (
         <Card className='expenses'>
             {
-                expenses.map(expense => <ExpenseItem expense={expense} />)
+                expenses.map(expense => <ExpenseItem key={expense.id} expense={expense} />)
             }
         </Card>
     )
