@@ -8,22 +8,21 @@ function Expenses({ expenses }) {
     const [filteredExpenses, setFilteredExpenses] = useState(expenses);
     const [filteredYear, setFilteredYear] = useState('2020')
 
-    const filterByYear = (selectedYear) =>{
+    const filterByYear = (selectedYear) => {
         setFilteredYear(selectedYear)
         const filterArray = expenses.filter((expense) => {
             const year = new Date(expense.date).getFullYear();
-            if(year == filteredYear){
+            if (year == filteredYear) {
                 return expense;
             }
         })
         setFilteredExpenses(filterArray)
-        
     }
-    
+
     return (
         <div>
-            <ExpensesFilter selected={filteredYear} onChangeFilter={filterByYear}/>
             <Card className='expenses'>
+                <ExpensesFilter selected={filteredYear} onChangeFilter={filterByYear} />
                 {
                     filteredExpenses.map(expense => <ExpenseItem key={expense.id} expense={expense} />)
                 }
