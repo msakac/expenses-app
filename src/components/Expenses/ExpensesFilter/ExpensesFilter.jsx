@@ -1,15 +1,15 @@
 import './ExpensesFilter.css'
 
-function ExpensesFilter({filterByYear}){
+function ExpensesFilter({filteredYear, onChangeFilter}){
 
     const selectOptionHandler = e =>{
-        filterByYear(e.target.value)
+        onChangeFilter(e.target.value)
     }
 
     return <div className="expenses-filter">
         <div className="expenses-filter__control">
             <label>Filter by year</label>
-            <select onChange={selectOptionHandler}>
+            <select value={filteredYear} onChange={selectOptionHandler}>
                 <option value="2022">2022</option>
                 <option value="2021">2021</option>
                 <option value="2020">2020</option>
