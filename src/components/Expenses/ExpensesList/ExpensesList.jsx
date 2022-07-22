@@ -1,9 +1,9 @@
 import ExpenseItem from '../ExpenseItem/ExpenseItem';
 import './ExpensesList.css'
 
-function ExpensesList({expenses}){
+function ExpensesList({ expenses }) {
 
-    if(expenses.length === 0){
+    if (expenses.length === 0) {
         return <p>No expenses found!</p>;
     }
 

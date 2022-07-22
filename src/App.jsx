@@ -33,7 +33,7 @@ function App() {
     console.log('In App.js');
     console.log(expense);
     setExpenses((oldExpenses)=>{
-      return [...oldExpenses, expense];
+      return [expense, ...oldExpenses];
     })
   }
 
