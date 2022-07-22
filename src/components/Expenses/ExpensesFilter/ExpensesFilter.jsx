@@ -1,7 +1,7 @@
 import './ExpensesFilter.css'
 
 function ExpensesFilter({filteredYear, onChangeFilter}){
-
+    console.log(filteredYear)
     const selectOptionHandler = e =>{
         onChangeFilter(e.target.value)
     }
